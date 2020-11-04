@@ -35,6 +35,9 @@
             this.btnVanE = new System.Windows.Forms.Button();
             this.btnMin = new System.Windows.Forms.Button();
             this.btnMax = new System.Windows.Forms.Button();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.lblStatus = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbEredmenyek
@@ -65,6 +68,7 @@
             this.btnHanyadik.TabIndex = 2;
             this.btnHanyadik.Text = "Hanyadik";
             this.btnHanyadik.UseVisualStyleBackColor = true;
+            this.btnHanyadik.Click += new System.EventHandler(this.btnHanyadik_Click);
             // 
             // btnHanyszor
             // 
@@ -74,6 +78,7 @@
             this.btnHanyszor.TabIndex = 3;
             this.btnHanyszor.Text = "Hanyszor";
             this.btnHanyszor.UseVisualStyleBackColor = true;
+            this.btnHanyszor.Click += new System.EventHandler(this.btnHanyszor_Click);
             // 
             // btnVanE
             // 
@@ -83,6 +88,7 @@
             this.btnVanE.TabIndex = 4;
             this.btnVanE.Text = "Van-e";
             this.btnVanE.UseVisualStyleBackColor = true;
+            this.btnVanE.Click += new System.EventHandler(this.btnVanE_Click);
             // 
             // btnMin
             // 
@@ -92,6 +98,7 @@
             this.btnMin.TabIndex = 5;
             this.btnMin.Text = "Min";
             this.btnMin.UseVisualStyleBackColor = true;
+            this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
             // 
             // btnMax
             // 
@@ -101,12 +108,30 @@
             this.btnMax.TabIndex = 6;
             this.btnMax.Text = "Max";
             this.btnMax.UseVisualStyleBackColor = true;
+            this.btnMax.Click += new System.EventHandler(this.btnMax_Click);
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lblStatus});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 372);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(480, 22);
+            this.statusStrip1.TabIndex = 7;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(118, 17);
+            this.lblStatus.Text = "toolStripStatusLabel1";
             // 
             // foForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(480, 357);
+            this.ClientSize = new System.Drawing.Size(480, 394);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.btnMax);
             this.Controls.Add(this.btnMin);
             this.Controls.Add(this.btnVanE);
@@ -120,7 +145,10 @@
             this.Name = "foForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Adat.txt Feldolgozó";
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -133,6 +161,8 @@
         private System.Windows.Forms.Button btnVanE;
         private System.Windows.Forms.Button btnMin;
         private System.Windows.Forms.Button btnMax;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel lblStatus;
     }
 }
 
